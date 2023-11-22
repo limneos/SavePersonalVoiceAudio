@@ -1,6 +1,6 @@
 mysay: mysay.c 
 	@echo ""
-	gcc -arch arm64e -x objective-c -framework Foundation -framework AudioToolbox -framework AVFoundation -shared mysay.c -o mysay.dylib
+	gcc -arch arm64e -x objective-c -framework Foundation -framework AudioToolbox -shared mysay.c -o mysay.dylib
 	@echo ""
 	gcc -x objective-c -arch arm64e -framework Foundation -framework AVFoundation authorize_terminal.c -o authorize_terminal
 	@echo ""
