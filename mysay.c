@@ -19,7 +19,7 @@
 #import <dlfcn.h>
 #import <objc/runtime.h>
 #import <AudioToolbox/AudioToolbox.h>
-#import <AVFoundation/AVFoundation.h>
+ 
  
 
 #define DYLD_INTERPOSE(_replacement,_replacee) \
@@ -88,16 +88,7 @@ void func(const struct mach_header *mh, intptr_t slide){
 
 __attribute__((constructor)) void constructor (int argc, char **argv){
 
-	[[NSBundle bundleWithPath:@"/System/Library/Frameworks/AVFoundation.framework"] load];
-	 if ([AVSpeechSynthesizer respondsToSelector:@selector(requestPersonalVoiceAuthorizationWithCompletionHandler:)]){
-
-		[AVSpeechSynthesizer requestPersonalVoiceAuthorizationWithCompletionHandler:^(AVSpeechSynthesisPersonalVoiceAuthorizationStatus status){
-			if (status == AVSpeechSynthesisPersonalVoiceAuthorizationStatusAuthorized){
-			
-			}
-		}];
-	}
-		
+	 
 	
 	for (int i=1; i<argc; i++){
 
