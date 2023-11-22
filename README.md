@@ -13,12 +13,12 @@ This project creates an executable that asks for authorization from terminal, so
 
 It also creates a library that you can then insert into say process using DYLD_INSERT_LIBRARIES that enables it to save personal voice speech to audio files, something that is not possible with Mac OS Sonoma at the time.
 
-#Requirements: 
+## Requirements: 
 Latest Xcode Command Line Tools and a terminal
 
 Download the code, cd to the folder and run make.
 
-#Usage:
+## Usage:
 1) run
 ./authorize_terminal to request and get authorization for Personal Voices in Terminal. You only need to do this once.
 
