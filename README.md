@@ -16,11 +16,16 @@ It also creates a library that you can then insert into say process using DYLD_I
 ## Requirements: 
 Latest Xcode Command Line Tools and a terminal
 
-Download the code, cd to the folder and run make.
+## Installation
+Download the code, cd to the extracted folder in Terminal and run "make".
 
 ## Usage:
-1) run
-./authorize_terminal to request and get authorization for Personal Voices in Terminal. You only need to do this once.
 
-2) run 
-DYLD_INSERT_LIBRARIES=./mysay.dylib say -v MyPersonalVoiceName "Text to speak" -e outputfilename.caf
+### ./authorize_terminal
+to request and get authorization for Personal Voices in Terminal. You only need to do this once.
+
+### DYLD_INSERT_LIBRARIES=./mysay.dylib say -v MyPersonalVoiceName "Text to speak" -e outputfilename.caf
+to run say with the ability to save an audio file of your speech to "outputfilename.caf" file
+
+## Warning
+PersonalVoice is private, you should avoid sharing your recordings with others as it can be used to create a replica of your own voice.
