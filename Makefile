@@ -1,8 +1,18 @@
 mysay: mysay.c 
 	@echo ""
-	gcc -arch arm64e -x objective-c -framework Foundation -framework AudioToolbox -shared mysay.c -o mysay.dylib
+#	gcc -arch arm64e -x objective-c -framework Foundation -framework AudioToolbox -shared mysay.c -o mysay.dylib
+	gcc -arch arm64e -x objective-c -framework Foundation -framework AudioToolbox -shared mysay.c -o mysay-arm64e.dylib
+	gcc -arch x86_64 -x objective-c -framework Foundation -framework AudioToolbox -shared mysay.c -o mysay-x86_64.dylib
+	lipo -create mysay-arm64e.dylib mysay-x86_64.dylib -o mysay.dylib
+	rm -f mysay-arm64e.dylib
+	rm -f mysay-x86_64.dylib
 	@echo ""
-	gcc -x objective-c -arch arm64e -framework Foundation -framework AVFoundation authorize_terminal.c -o authorize_terminal
+#	gcc -x objective-c -arch arm64e -framework Foundation -framework AVFoundation authorize_terminal.c -o authorize_terminal
+	gcc -x objective-c -arch arm64e -framework Foundation -framework AVFoundation authorize_terminal.c -o authorize_terminal_arm64e
+	gcc -x objective-c -arch x86_64 -framework Foundation -framework AVFoundation authorize_terminal.c -o authorize_terminal_x86_64
+	lipo -create authorize_terminal_arm64e authorize_terminal_x86_64 -o authorize_terminal
+	rm -f authorize_terminal_arm64e
+	rm -f authorize_terminal_x86_64
 	@echo ""
 	@echo "\x1b[32mAll Done!"
 	@echo ""
