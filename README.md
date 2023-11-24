@@ -1,6 +1,6 @@
 # SavePersonalVoiceAudio
 
-Allows recording of Personal Voices to a file using builtin say command in Mac OS Sonoma
+Allows recording of Personal Voices to a file using builtin say command on Mac OS Sonoma
 
 Since Apple released the Personal Voice feature on Mac OS, you cannot use it in command line using the
 "say -v MyPersonalVoice" command, 
