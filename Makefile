@@ -15,3 +15,4 @@ mysay: mysay.c
 	@echo "DYLD_INSERT_LIBRARIES=./mysay.dylib say -v MyPersonalVoiceName \"text to speak\" -e <path to file>.caf\x1b[m"
 clean:
 	rm -f mysay.dylib 
+	rm -f authorize_terminal
