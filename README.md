@@ -24,10 +24,10 @@ Download the code, cd to the extracted folder in Terminal and run "make".
 ### ./authorize_terminal
 to request and get authorization for Personal Voices in Terminal. You only need to do this once.
 
-### DYLD_INSERT_LIBRARIES=./mysay.dylib say -v YourPersonalVoiceName "Text to speak" -e outputfilename.caf
-to run say with the ability to save an audio file of your speech to "outputfilename.caf" file. Note it uses -e instead of -o
+### DYLD_INSERT_LIBRARIES=./mysay.dylib say -v YourPersonalVoiceName "Text to speak" -o outputfilename.caf
+to run say with the ability to save an audio file of your speech to "outputfilename.caf" file. 
 
-Note: I have noticed that PersonalVoice randonly stops working system-wide. A solution to this is to open Settings - Accessibility - Live Speech, enable Live Speech, set your personal voice as the speaking voice, and have it speak a word.
+Note: I have noticed that PersonalVoice randonly stops working system-wide. A solution to this is to open Settings - Accessibility - Live Speech, enable Live Speech, set your personal voice as the speaking voice, and have it speak a word. If this doesn't work, you may need to reboot.
 
 ## Warning
 PersonalVoice is private, you should avoid sharing your speech recordings (and any recordings of your voice, in general) with others as it can be used to create a replica of your own voice and there may be malicious attempts to impersonate you.
